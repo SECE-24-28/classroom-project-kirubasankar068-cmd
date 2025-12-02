@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background: #f5f5f5;
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            width: 420px;
+            margin: 40px auto;
+            background: #ffffff;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0px 0px 12px rgba(0,0,0,0.1);
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            margin: 10px 0 5px;
+            font-weight: bold;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="tel"],
+        textarea {
+            width: 100%;
+            padding: 10px;
+            border-radius: 6px;
+            border: 1px solid #bbb;
+            margin-bottom: 15px;
+            font-size: 14px;
+        }
+
+        .inline-group {
+            margin-bottom: 15px;
+        }
+
+        .inline-group label {
+            display: inline-block;
+            margin-right: 15px;
+            font-weight: normal;
+        }
+
+        button {
+            width: 48%;
+            padding: 10px;
+            border: none;
+            border-radius: 6px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        .submit-btn {
+            background: #4CAF50;
+            color: white;
+        }
+        
+
+        .reset-btn {
+            background: #e53935;
+            color: white;
+            float: right;
+        }
+    </style>
+</head>
+<body>
+    <h> Contact Form </h>
+    <div class="container">
+        <h2>Contact Form</h2>
+
+
+    <form onsubmit="submitForm(); return false;">
+
+        <table cellpadding="8">
+
+            <tr>
+                <td>Name</td>
+                <td><input type="text" id="name" required></td>
+            </tr>
+
+            <tr>
+                <td>Email</td>
+                <td><input type="email" id="email" required></td>
+            </tr>
+
+            <tr>
+                <td>Password</td>
+                <td><input type="password" id="password" required></td>
+            </tr>
+
+            <tr>
+                <td>Phone</td>
+                <td><input type="text" id="phone" required></td>
+            </tr>
+
+            <tr>
+                <td>Date</td>
+                <td><input type="date" id="date" required></td>
+            </tr>
+
+            <tr>
+                <td>Time</td>
+                <td><input type="time" id="time" required></td>
+            </tr>
+
+            <tr>
+                <td>Course</td>
+                <td>
+                    <select id="course" required>
+                        <option value="">-- Select Course --</option>
+                        <option value="HTML">HTML</option>
+                        <option value="Python">Python</option>
+                        <option value="Java">Java</option>
+                    </select>
+                </td>
+            </tr>
+
+            <tr>
+                <td>Gender</td>
+                <td>
+                    <input type="radio" name="gender"> Male
+                    <input type="radio" name="gender"> Female
+                    <input type="radio" name="gender"> Other
+                </td>
+            </tr>
+
+            <tr>
+                <td>Hobbies</td>
+                <td>
+                    <input type="checkbox"> Reading
+                    <input type="checkbox"> Music
+                    <input type="checkbox"> Sports
+                </td>
+            </tr>
+
+            <tr>
+                <td>Message</td>
+                <td><textarea rows="4" cols="30"></textarea></td>
+            </tr>
+
+            <tr>
+                <td></td>
+                <td>
+                    <button type="submit">Submit</button>
+                    <button type="reset">Reset</button>
+                </td>
+            </tr>
+
+        </table>
+
+    </form>
+
+    <script>
+        function submitForm() {
+            alert("Form submitted successfully!");
+        }
+    </script>
+
+</body>
+</html>
